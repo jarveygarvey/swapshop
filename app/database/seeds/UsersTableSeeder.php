@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder {
 
 		// $this->call('UserTableSeeder');
 
-		// DB::table('users')->delete();
+		DB::table('users')->delete();
 
 		$users = User::create(array(
 		  'username' => 'garveyj2',
@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder {
 		  'county' => 'Dublin 7',
 		  'country' => 'Ireland',
 		  'email' => 'garveyj2@tcd.ie',
-		  'password' => 'password',
+		  'password' => Hash::make('secret'),
 		  'active' => '1',
 		  'rating' => '5',
 		  'acc_type_regular' =>'1'
@@ -43,7 +43,7 @@ class UsersTableSeeder extends Seeder {
 		    'county' => $faker->city,
 		    'country' => $faker->country,
 		    'email' => $faker->email,
-		    'password' => 'password',
+		    'password' => Hash::make('secret'),
 		    'active' => $faker->boolean(0),
 		    'rating' => $faker->numberBetween(1,5),
 		    'acc_type_regular' => $faker->boolean(1)
@@ -55,3 +55,4 @@ class UsersTableSeeder extends Seeder {
 	}
 
 }
+
