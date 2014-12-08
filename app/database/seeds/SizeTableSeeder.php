@@ -10,11 +10,7 @@ class SizeTableSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
-
-		// $this->call('UserTableSeeder');
-
 		DB::table('sizes')->delete();
-
 
 		$faker = Faker\Factory::create();
  
@@ -26,8 +22,6 @@ class SizeTableSeeder extends Seeder {
 		    'shoe_size' => $faker->numberBetween(1,13)
 		    ));
 		}
-
-		// DB::table('users')->insert($users);
 
 	}
 }

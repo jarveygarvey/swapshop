@@ -44,9 +44,9 @@ class UsersTableSeeder extends Seeder {
 		    'country' => $faker->country,
 		    'email' => $faker->email,
 		    'password' => Hash::make('secret'),
-		    'active' => $faker->boolean(0),
+		    'active' => $faker->boolean(),
 		    'rating' => $faker->numberBetween(1,5),
-		    'acc_type_regular' => $faker->boolean(1)
+		    'acc_type_regular' => $faker->boolean()
 		  ));
 		}
 
