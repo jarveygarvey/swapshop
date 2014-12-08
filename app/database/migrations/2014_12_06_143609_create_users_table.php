@@ -24,6 +24,8 @@ class CreateUsersTable extends Migration {
 			$table->string('country',20);
 			$table->string('email',20)->unique();;
 			$table->string('password',10);
+			$table->string('temporary',10);
+			$table->string('code',10);
 			$table->boolean('active')->default(0);
 			$table->integer('rating');
 			$table->boolean('acc_type_regular')->default(1);

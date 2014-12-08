@@ -22,6 +22,8 @@ class UsersTableSeeder extends Seeder {
 		  'country' => 'Ireland',
 		  'email' => 'garveyj2@tcd.ie',
 		  'password' => Hash::make('secret'),
+		  'temporary' => 'secret',
+		  'code'=>'asdwergjhe',
 		  'active' => '1',
 		  'rating' => '5',
 		  'acc_type_regular' =>'1'
@@ -41,6 +43,8 @@ class UsersTableSeeder extends Seeder {
 		    'country' => $faker->country,
 		    'email' => $faker->email,
 		    'password' => Hash::make('secret'),
+		    'temporary'=>'secret',
+		    'code'=>$faker->word,
 		    'active' => $faker->boolean(),
 		    'rating' => $faker->numberBetween(1,5),
 		    'acc_type_regular' => $faker->boolean()
