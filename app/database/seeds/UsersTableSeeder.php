@@ -10,9 +10,6 @@ class UsersTableSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
-
-		// $this->call('UserTableSeeder');
-
 		DB::table('users')->delete();
 
 		$users = User::create(array(
@@ -49,10 +46,6 @@ class UsersTableSeeder extends Seeder {
 		    'acc_type_regular' => $faker->boolean()
 		  ));
 		}
-
-		// DB::table('users')->insert($users);
-		
 	}
-
 }
 

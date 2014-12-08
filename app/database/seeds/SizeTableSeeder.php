@@ -22,7 +22,6 @@ class SizeTableSeeder extends Seeder {
 		    'shoe_size' => $faker->numberBetween(1,13)
 		    ));
 		}
-
 	}
 }
 
