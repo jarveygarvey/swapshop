@@ -18,3 +18,7 @@
 
 
 Route::get('/', array('as'=>'contact','uses'=>'HomeController@getIndex'));
+
+Route::get('/login',array('as' => 'login','uses'=>'AuthController@getLogin'));
+
+Route::get('/login',array('uses'=>'AuthController@postLogin'));
