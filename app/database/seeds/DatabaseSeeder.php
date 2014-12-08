@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('ListingSeeder');
 		$this->call('BidSeeder');
 		$this->call('WatchlistSeeder');
-		$this->call('Images');
+		$this->call('ImageSeeder');
 
 		DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 	}

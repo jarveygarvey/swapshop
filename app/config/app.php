@@ -168,7 +168,6 @@ return array(
 		'Form'              => 'Illuminate\Support\Facades\Form',
 		'Hash'              => 'Illuminate\Support\Facades\Hash',
 		'HTML'              => 'Illuminate\Support\Facades\HTML',
-		'Image' 			=> 'Intervention\Image\Facades\Image',
 		'Input'             => 'Illuminate\Support\Facades\Input',
 		'Lang'              => 'Illuminate\Support\Facades\Lang',
 		'Log'               => 'Illuminate\Support\Facades\Log',
@@ -190,6 +189,7 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
+		'Image' 			=> 'Intervention\Image\Facades\Image',
 
 	),
 

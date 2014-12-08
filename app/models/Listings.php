@@ -13,10 +13,13 @@ class Listings extends \Eloquent {
         return $this->hasMany('users');
     }
 
-    // public function images()
-    // {
-    //     return $this->hasMany('images');
-    // }
+    public function images()
+    {
+        return $this->hasMany('images');
+    }
 
-
+    public function watchlist()
+    {
+        return $this->belongsTo('watchlists');
+    }
 }

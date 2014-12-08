@@ -10,9 +10,9 @@ class ImageSeeder extends Seeder {
 		for ($i = 0; $i < 6; $i++)
 		{
 		  $images=Images::create(array(
-		    'user_id'=>$faker->randomDigit,
-		    'image_location'=>$faker->imageUrl($width = 640, $height = 480)
-		    ));
+		    'image_location'=>$faker->imageUrl($width = 640, $height = 480),
+		    'listing_id'=>$faker->randomDigit
+		  ));
 		}
 	}
 }

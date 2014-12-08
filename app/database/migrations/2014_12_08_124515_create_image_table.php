@@ -19,7 +19,9 @@ class CreateImageTable extends Migration {
 
 	public function down()
 	{
-		// Schema::drop('images');
+		DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+		Schema::drop('images');
+		DB::statement('SET FOREIGN_KEY_CHECKS = 1');
 	}
 
 }
