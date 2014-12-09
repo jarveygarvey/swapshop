@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+@extends ('layout.main')
+@section ('content')
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,101 +37,42 @@
 
 <body>
 
-    <!-- Navigation -->
-  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Thrift Swap</a>
-            </div>
 
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                     <input type="text" class="form-control" placeholder="Search" style="width:100%;">
-                </div>
-               <button type="submit" class="btn btn-default">Submit</button>
-            </form> 
-
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="about.html">My Watch List</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Welcome Nicole</a>
-                       <!--  <a href="contact.html"><u>Sign In</u> / <u>Log Out</u></a> -->
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/BG.png')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Swap or Shop</h1>
-                        <hr class="small">
-                        <span class="subheading">Whatever you may choose...</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <nav>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:left; width:100%;">
                 <ul class="nav navbar-nav navbar-right" color="white">
                     <li >
-                        <a href="index.html"> + Add item</a>
+                        <a href="{{URL::route('home')}}"> + Add item</a>
                     </li>
                     <li>
-                        <a href="about.html">Start swapping</a>
+                        <a href="{{URL::route('home')}}">Start swapping</a>
                     </li>
                     <li>
-                        <a href="index.html">Go to my Profile</a>
+                        <a href="{{URL::route('home')}}">Go to my Profile</a>
                        <!--  <a href="contact.html"><u>Sign In</u> / <u>Log Out</u></a> -->
                     </li>
                     <li>
-                        <a href="about.html">Dresses</a>
+                        <a href="{{URL::route('home')}}">Dresses</a>
                     </li>
                     <li>
-                        <a href="about.html">Tops</a>
+                        <a href="{{URL::route('home')}}">Tops</a>
                     </li>
                     <li>
-                        <a href="about.html">Pants</a>
+                        <a href="{{URL::route('home')}}">Pants</a>
                     </li>
                     <li>
-                        <a href="about.html">Shoes</a>
+                        <a href="{{URL::route('home')}}">Shoes</a>
                     </li>
                     
                     <li>
-                        <a href="about.html">Bags & Accessories</a>
+                        <a href="{{URL::route('home')}}">Bags & Accessories</a>
                     </li>
                     <li>
-                        <a href="about.html">  Kids </a>
+                        <a href="{{URL::route('home')}}">  Kids </a>
                     </li>
                     <li>
-                        <a href="about.html">  Mens 
+                        <a href="{{URL::route('home')}}">  Mens 
                             <!-- <ul class="sub-menu">
                                 <li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-673"><a href="http://www.paulgarveyagencies.ie/azor-footwear-smart/">Smart</a></li>
                                 <li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="http://www.paulgarveyagencies.ie/azor-footwear-boots/">Boots</a></li>
@@ -178,53 +117,4 @@
                         <p style="float: left; width: 200px; margin-left: 5px; margin-bottom: 5px; text-align: center: font-size: 8pt;"><img src="img/dress4.jpg" id="Image7"alt="Lipsy red dress" style="width: 100%;">Value: €50<br>userQ <br>★★★★★<br></p>       
                         <p style="float: left; width: 200px; margin-left: 5px; margin-bottom: 5px; text-align: center: font-size: 8pt;"><img src="img/dress5.jpg" id="Image7"alt="Lipsy red dress" style="width: 100%;">Value: €40<br>userW <br>★★★★★<br></p>  
                 </div>               
-                   
-<!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; ThriftSwap 2014</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
-
-</body>
-
-</html>
+@stop
