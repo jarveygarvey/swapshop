@@ -1,4 +1,11 @@
-// <?php
+<?php
+
+class ListingController extends Controller {
+	public function getListing()
+	{
+		return View::make('listing');
+	}	
+}
 
 // class ListingController extends BaseController {
 	

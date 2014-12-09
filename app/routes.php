@@ -5,6 +5,11 @@
 		'uses' => 'HomeController@home'
 	));
 
+	Route::get('/listing',array(
+		'as' => 'listing',
+		'uses' => 'ListingController@getListing'
+	));
+
 	// Route::get('/listing', array(
 	// 	'as' => 'listing',
 	// 	'uses' => 'ListingController@getListing'

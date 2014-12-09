@@ -129,8 +129,8 @@
                             <button type="submit" class="btn btn-default">Sign Up!</button>
                         </div>
                     </div>
-                    <input type="submit" value = "Create account">
-                {{Form::token()}}
+                  
+                
                 </form>
             </div>
         </div>
