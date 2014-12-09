@@ -1,7 +1,7 @@
 <?php 
 class AccountController extends BaseController {
 	public function getSignIn(){
-		return View::make('signin');
+		return View::make('sign-in');
 	}
 
 	public function postSignIn(){

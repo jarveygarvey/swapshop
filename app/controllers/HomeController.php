@@ -8,7 +8,7 @@ class HomeController extends BaseController {
 		// Mail::send('emails.auth.test', array('name' => 'Phil'), function($message){
 		// 	$message->to('delaneyphil@mail.ru', 'Phil G')->subject('test email');
 		// });
-		return View::make('index');
+		return View::make('home');
 	}
 	
 }

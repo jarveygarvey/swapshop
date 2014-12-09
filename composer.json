@@ -6,7 +6,7 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"intervention/image": "~2.0"
+		"intervention/image": "dev-master"
 	},
 	"require-dev": {
 	    "way/generators": "2.6.*",

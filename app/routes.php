@@ -1,9 +1,28 @@
 <?php
 
-Route::get('/', array(
-	'as' => 'home',
-	'uses' => 'HomeController@home'
+	Route::get('/', array(
+		'as' => 'home',
+		'uses' => 'HomeController@home'
 	));
+
+	// Route::get('/listing', array(
+	// 	'as' => 'listing',
+	// 	'uses' => 'ListingController@getListing'
+	// ));
+
+	// Route::get('/listing', function(){
+	// 	return View::make('index');
+	// });
+	
+	// Route::post('upload',function(){
+	// 	Input::file('image');
+	// 	var_dump($image->getRealPath());
+	// 	$filename = $image->getClientOriginalName();
+	// 	if(Image::make($image->getRealPath())>resize('200','200')->save('public/img'.$filename)){
+	// 		return 'image uploaded';
+	// 	}
+	// });
+
 
 //Authenticated group
 Route::group(array('before' => 'guest'), function(){
@@ -42,4 +61,5 @@ Route::group(array('before' => 'guest'), function(){//route group - nests routes
 		'as' => 'account-create',
 		'uses' =>'AccountController@getCreate'
 	));
-	});
+});
+
