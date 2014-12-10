@@ -1,11 +1,5 @@
 @extends('layout.main')
-
-
-
 @section('content')
-
-
-    
 
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Index</title>
+    <title>Home</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,18 +28,7 @@
     <link type="text/css" href="/_beta/css/all-site-global.css?v=20141007" rel="stylesheet" media="screen" /> 
     <link type="text/css" href="/_beta/css/new_snow.css?v=5" rel="stylesheet" media="screen" />  
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]--></head>
-
-<body>
-
-
-
-    <nav>
+<nav>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:left; width:100%;">
                 <ul class="nav navbar-nav navbar-right" color="white">
                     <li >

@@ -4,14 +4,11 @@
 		'as' => 'home',
 		'uses' => 'HomeController@home'
 	));
-	Route::get('/about',array(
-		'as' => 'about',
-		'uses' => 'HomeController@about'
-	));
+
 	Route::get('/listing',array(
 		'as' => 'listing',
 		'uses' => 'ListingController@getListing'
-	));
+	))->before('auth');
 
 	// Route::get('/listing', array(
 	// 	'as' => 'listing',
@@ -33,7 +30,7 @@
 
 
 //Authenticated group
-Route::group(array('before' => 'auth'), function(){
+Route::group(array('before' => 'guest'), function(){
 //sign out (GET)
 	Route::get('/account/sign-out/', array(
 		'as' => 'sign-out',
@@ -51,11 +48,11 @@ Route::group(array('before' => 'guest'), function(){//route group - nests routes
 			'as' => 'account-create', //can name same as get
 			'uses' =>'AccountController@postCreate'
 		)); //effectively picking up URL /account/create and passing it as a specific name 'account-create'
-		//sign in (Post)
-	Route::post('/account/sign-in/', array(
-		'as' => 'sign-in',
-		'uses' =>'AccountController@postSignIn'
-	));
+	//sign in (Post)
+		Route::post('/account/sign-in/', array(
+			'as' => 'sign-in',
+			'uses' =>'AccountController@postSignIn',
+		));
 
 	});
 	//sign in (GET)
@@ -64,11 +61,10 @@ Route::group(array('before' => 'guest'), function(){//route group - nests routes
 		'uses' =>'AccountController@getSignIn'
 	));
 
-
-
 	//create account (GET)
 	Route::get('/account/create', array(
 		'as' => 'account-create',
 		'uses' =>'AccountController@getCreate'
 	));
 });
+

@@ -34,15 +34,14 @@
 
 
     <div class="container">
-    	<form action="{{URL::route('sign-in')}}" method="post">
 	        <div class="row">
 	            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	                <p>Fill in the details below to sign up for your free Thriftswap account!</p>
-	                <form name="sentMessage" id="contactForm" action = "{{URL::route('account-create')}}" method = "post">
+	                <form name="sentMessage" action = "{{URL::route('sign-in')}}" method = "post">
 	                    <div class="row control-group">
 	                        <div class="form-group col-xs-12 floating-label-form-group controls">
 	                            <label>Username</label>
-	                            <input type="text" class="form-control" placeholder="Username" id="Uname" required data-validation-required-message="Please enter your name." name="username"{{(Input::old('username')) ? 'value="'.e(Input::old('username')).'"': ''}}>
+	                            <input type="text" class="form-control" placeholder="Username" required data-validation-required-message="Please enter your name." name="username"{{(Input::old('username')) ? 'value="'.e(Input::old('username')).'"': ''}}>
 	                                @if ($errors->has('username'))
 	                                    {{$errors->first('username')}}
 	                                @endif
@@ -55,7 +54,7 @@
 	                    <div class="row control-group">
 	                        <div class="form-group col-xs-12 floating-label-form-group controls">
 	                            <label>Password</label>
-	                            <input type="password" class="form-control" placeholder="Password" id="Password1" required data-validation-required-message="Please enter your phone number.">
+	                            <input type="password" class="form-control" placeholder="Password" required data-validation-required-message="Please enter your phone number." name="password">
 	                            @if ($errors->has('password'))
 	                                {{$errors->first('password')}}
 	                            @endif
@@ -74,7 +73,6 @@
 	                </form>
 	            </div>
 	        </div>
-	   	</form>
     </div>
 
 

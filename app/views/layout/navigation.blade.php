@@ -1,22 +1,6 @@
-<!--<nav> 
-	<ul>
-		<li><a href="{{URL::route('home')}}">Home</a> </li>
-		/*
-			checks if logged in
-		*/
-		@if(Auth::check()) 
-		
-		@else
-		<li><a href="{{URL::route('account-create')}}">Create an Account</a> </li>
-		@endif
-	</ul>
-</nav>
--->
-
     <!-- Navigation -->
   <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -45,24 +29,15 @@
 					checks if logged in
 					-->
 					@if(Auth::check()) 
-		                  <p>Welcome, {{Auth::user()->first_name}}</p>
-                          <li><a href="{{URL::route('sign-out')}}">Sign Out</a></li>
+                        <li><a href="{{URL::route('home')}}">Account</a></li>
+                        <li><a href="{{URL::route('sign-out')}}">Sign Out</a></li>
+                        <li><a href="{{URL::route('home')}}">My Watch List</a></li>
 					@else
-                    <li>
-                        <a href="{{URL::route('sign-in')}}">Sign In</a>
-                    </li>
-					<li><a href="{{URL::route('account-create')}}">Create an Account</a> </li>
+                    <li><a href="{{URL::route('sign-in')}}">Sign In</a></li>
+					<li><a href="{{URL::route('account-create')}}">Sign up</a> </li>
 					@endif
-                    <li>
-                        <a href="{{URL::route('home')}}">About</a>
-                    </li>
-                    <li>
-                        <a href="{{URL::route('home')}}">My Watch List</a>
-                    </li>
-                    
+                    <li><a href="{{URL::route('about')}}">About</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>

@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
 
-    <title>Clean Blog - Contact</title>
+    <title>Register</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">

@@ -3,17 +3,17 @@
 class AuthController extends Controller {
 	public function getIndex()
 	{
-		return View::make('SignUp1');
+		return View::make('home');
 	}
 	
 	public function getLogin()
 	{
-		return View::make('login');
+		return View::make('sign-in');
 	}
 
 	public function postLogin()
 	{
-		return View::make('contact');
+		return View::make('sign-in');
 	}
 
 }

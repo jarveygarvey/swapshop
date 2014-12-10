@@ -15,26 +15,25 @@ class AccountController extends BaseController {
 				->withErrors($validator)
 				->withInput();
 		}else {
-			$auth = Auth::attempt(array(
+			if(Auth::attempt(array(
 				'username' => Input::get('username'),
-				'password' => Input::get('password'),
-				'active' => 1 ));
-			if($auth){
+				'password' => Input::get('password') ,
+				'active' => 1))) {
 				//redirect to intended page
-				return Redirect::intended('/');
-			}else{ Redirect::route('sign-in')
-				->with('global', 'There was a problem signing you in. Have you activated?')
+				return Redirect::route('home');
+			}else{ return Redirect::route('sign-in')
+				->with('global', 'Failed to authenticate user.')
 				->withErrors($validator)
 				->withInput();
-		}
+			}
 		}
 		return Redirect::route('sign-in')
-		->with('global', 'There was a problem signing you in. Have you activated?');
+		->with('global', 'Not Filled in properly, IDIOT!');
 	}
 
 	public function getSignOut(){
 		Auth::logout();
-		return Redirect::route('index');
+		return Redirect::route('home');
 	}
 	//viewing form
 	public function getCreate(){
